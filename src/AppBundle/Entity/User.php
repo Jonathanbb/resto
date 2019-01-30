@@ -7,7 +7,7 @@ use Symfony\Component\Security\Core\User\AdvancedUserInterface;
 /**
  * User
  */
-class User implements AdvancedUserInterface, \Serializable 
+class User implements AdvancedUserInterface, \Serializable
 {
     /**
      * @var int
@@ -198,4 +198,49 @@ class User implements AdvancedUserInterface, \Serializable
     {
         return $this->manyToOne;
     }
+
+    public function isAccountNonExpired()
+      {
+
+      }
+
+      public function isAccountNonLocked()
+      {
+
+      }
+
+      public function isCredentialsNonExpired()
+      {
+
+      }
+
+      public function isEnabled()
+      {
+
+      }
+
+      public function getRoles()
+      {
+
+      }
+
+      public function getSalt()
+      {
+
+      }
+
+      public function eraseCredentials()
+      {
+
+      }
+
+      public function serialize()
+      {
+
+      }
+
+      public function unserialize($serialized)
+      {
+
+      }  
 }

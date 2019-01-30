@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% if error %}
+    <div>{{ error.message }}</div>
+{% endif %}
+<h1>Connectez-vous</h1>
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Connexion" />
+{{ form_end(form) }}
+
+{% endblock %}

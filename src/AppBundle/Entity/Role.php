@@ -1,11 +1,12 @@
 <?php
 
 namespace AppBundle\Entity;
+use Symfony\Component\Security\Core\Role\RoleInterface;
 
 /**
  * Role
  */
-class Role
+class Role implements RoleInterface
 {
     /**
      * @var int
@@ -40,7 +41,7 @@ class Role
      *
      * @return Role
      */
-    public function setRoleId($roleId)
+    public function setRole($roleId)
     {
         $this->roleId = $roleId;
 
@@ -52,7 +53,7 @@ class Role
      *
      * @return string
      */
-    public function getRoleId()
+    public function getRole()
     {
         return $this->roleId;
     }
