@@ -1,0 +1,30 @@
+AppBundle\Entity\CommandDetails:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CommandDetailsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        quantity:
+            type: integer
+
+    manyToOne:
+          commandId:
+              targetEntity: Commands
+              joinColumn:
+                  name: command_id
+                  referencedColumnName: id
+                  nullable: false
+          cardId:
+              targetEntity: Menu
+              joinColumn:
+                  name: card_id
+                  referencedColumnName: id
+                  nullable: false
+
+
+    lifecycleCallbacks: {  }

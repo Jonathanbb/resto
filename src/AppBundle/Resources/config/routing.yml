@@ -1,0 +1,4 @@
+app_menu:
+    resource: "@AppBundle/Resources/config/routing/menu.yml"
+    prefix:   /menu
+

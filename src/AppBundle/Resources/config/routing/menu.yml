@@ -1,0 +1,54 @@
+carte_panier_clean:
+    path:     /panier/clean
+    defaults: { _controller: "AppBundle:Menu:cleanCart" }
+    methods:  GET
+
+carte_panier_check:
+    path:     /panier/check
+    defaults: { _controller: "AppBundle:Menu:checkCart" }
+    methods:  GET
+
+menu_index_public:
+    path:     /
+    defaults: { _controller: "AppBundle:Menu:indexClient" }
+    methods:  GET
+
+menu_show_public:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Menu:show" }
+    methods:  GET
+
+menu_show_category:
+    path:     /category/{id}
+    defaults: { _controller: "AppBundle:Menu:indexClientCategory" }
+    methods:  GET
+
+menu_add:
+    path:     /cart/add/{id}
+    defaults: { _controller: "AppBundle:Menu:addCart" }
+    methods:  GET
+
+menu_index:
+    path:     /admin
+    defaults: { _controller: "AppBundle:Menu:index" }
+    methods:  GET
+
+menu_show:
+    path:     /admin/{id}/show
+    defaults: { _controller: "AppBundle:Menu:show" }
+    methods:  GET
+
+menu_new:
+    path:     /admin/new
+    defaults: { _controller: "AppBundle:Menu:new" }
+    methods:  [GET, POST]
+
+menu_edit:
+    path:     /admin/{id}/edit
+    defaults: { _controller: "AppBundle:Menu:edit" }
+    methods:  [GET, POST]
+
+menu_delete:
+    path:     /admin/{id}/delete
+    defaults: { _controller: "AppBundle:Menu:delete" }
+    methods:  DELETE

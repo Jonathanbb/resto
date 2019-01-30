@@ -1,0 +1,39 @@
+{% extends 'admin.layout.html.twig' %}
+
+{% block body %}
+    <h1>Commands list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Totalprice</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for command in commands %}
+            <tr>
+                <td><a href="{{ path('commands_show', { 'id': command.id }) }}">{{ command.id }}</a></td>
+                <td>{{ command.totalPrice }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('commands_show', { 'id': command.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('commands_edit', { 'id': command.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('commands_new') }}">Create a new command</a>
+        </li>
+    </ul>
+{% endblock %}

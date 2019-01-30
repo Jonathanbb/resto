@@ -1,0 +1,24 @@
+commands_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Commands:index" }
+    methods:  GET
+
+commands_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Commands:show" }
+    methods:  GET
+
+commands_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Commands:new" }
+    methods:  [GET, POST]
+
+commands_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Commands:edit" }
+    methods:  [GET, POST]
+
+commands_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Commands:delete" }
+    methods:  DELETE

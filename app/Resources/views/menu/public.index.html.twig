@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    <h1>Carte du restaurant</h1>
+    <section class = "product">
+        {% for menu in menus %}
+        <div class="box">
+                <h3>{{ menu.productName }}</h3>
+                <p>{{ menu.productDescription }}</p>
+                <div class = "picture">
+                <img src="{{ asset('uploads/images/'~menu.productImage)}}" alt="menu">
+                </div>
+
+ <a href = "{{ path('menu_add', {'id': menu.id}) }}">
+                <button class="button">
+	               <div>Ajouter au panier<div>
+	               <div>{{ menu.price }} €<div>
+                </button>
+                <a>
+                </div>
+        {% endfor %}
+        </section>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'admin.layout.html.twig' %}
+
+{% block body %}
+    <h1>Menus list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Productname</th>
+                <th>Productdescription</th>
+                <th>Productimage</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Catégorie</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for menu in menus %}
+            <tr>
+                <td><a href="{{ path('menu_show', { 'id': menu.id }) }}">{{ menu.id }}</a></td>
+                <td>{{ menu.productName }}</td>
+                <td>{{ menu.productDescription }}</td>
+                <td><img src="{{ asset('uploads/images/'~menu.productImage)}}" alt="menu"></td>
+                <td>{{ menu.price }}</td>
+                <td>{{ menu.categorie.name}}</td>
+                <td>{{ menu.stock }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('menu_show', { 'id': menu.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('menu_edit', { 'id': menu.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('menu_new') }}">Create a new menu</a>
+        </li>
+    </ul>
+{% endblock %}

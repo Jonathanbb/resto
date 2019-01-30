@@ -1,0 +1,27 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+app_menu:
+    resource: "@AppBundle/Resources/config/routing/menu.yml"
+    prefix:   /menu
+
+app_category:
+        resource: "@AppBundle/Resources/config/routing/category.yml"
+        prefix:   /category
+
+app_commands:
+        resource: "@AppBundle/Resources/config/routing/commands.yml"
+        prefix:   /commands
+
+app_role:
+        resource: "@AppBundle/Resources/config/routing/role.yml"
+        prefix:   /role
+
+app_user:
+        resource: "@AppBundle/Resources/config/routing/user.yml"
+        prefix:   /user
+
+app_commanddetails:
+        resource: "@AppBundle/Resources/config/routing/commanddetails.yml"
+        prefix:   /commanddetails

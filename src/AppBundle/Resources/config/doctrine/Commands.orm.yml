@@ -1,0 +1,23 @@
+AppBundle\Entity\Commands:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CommandsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        totalPrice:
+            type: float
+
+    manyToOne:
+          userId:
+              targetEntity: User
+              joinColumn:
+                  name: user_id
+                  referencedColumnName: id
+                  nullable: false
+
+    lifecycleCallbacks: {  }

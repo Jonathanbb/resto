@@ -1,0 +1,37 @@
+AppBundle\Entity\Menu:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\MenuRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        productName:
+            type: string
+            length: 255
+        productDescription:
+            type: text
+            nullable: true
+        productImage:
+            type: string
+            length: 255
+            nullable: true
+            column: ProductImage
+        price:
+            type: float
+        stock:
+            type: integer
+
+    manyToOne:
+        categorie:
+            targetEntity: Category
+            joinColumn:
+                 name: category_id
+                 referencedColumnName: id
+                 nullable: false
+
+
+    lifecycleCallbacks: {  }

@@ -1,0 +1,27 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+  <h1>Carte du restaurant</h1>
+  <section class = "product">
+    {% for menu in cartes %}
+    <div class="box">
+      <h3>{{ menu.productName }}</h3>
+      <p>{{ menu.productDescription }}</p>
+      <div class = "picture">
+        <img src="{{ asset('uploads/images/'~menu.productImage)}}" alt="menu">
+      </div>
+    </div>
+
+{% endfor %}
+
+</section>
+
+    <a href = "{{ path("carte_panier_clean") }}">
+               <button class="button">
+              Vider le panier
+               </button>
+    </a>
+
+
+
+{% endblock %}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3WA Restaurant</title>
+    <!-- <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css"> -->
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/normalize-3.0.3.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/font-awesome-4.3.0.min.css') }}">
+
+
+    <!-- Feuilles de styles de l'application -->
+
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/3wa-resto.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/ui-button.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/ui-form.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/ui-table.css') }}">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="{{ asset('bundles/js/utilities.js') }}"></script>
+</head>
+<body>
+
+<!-- En-tête commune -->
+
+<header>
+
+
+    <nav role="navigation">
+       <ul>
+      <li><a href="{{ path('homepage') }}">Accueil</a></li>
+      <li><a href="{{ path('menu_index_public')}}">Menu</a>
+        <ul class="dropdown">
+        <li><a href="{{ path('menu_show_category', {'id': '4'})}}">Boisson</a></li>
+        <li><a href="{{ path('menu_show_category', {'id': '1'})}}">entree</a></li>
+        <li><a href="{{ path('menu_show_category', {'id': '2'})}}">plat</a></li>
+        <li><a href="{{ path('menu_show_category', {'id': '3'})}}">dessert</a></li>
+        </ul>
+      </li>
+      <li><a href="{{ path('carte_panier_check') }}">Votre panier</a></li>
+      <li><a href="#">S'enregistrer</a></li>
+      <li><a href="#">Se déconnecter</a></li>
+      <li><a href="#" >Se connecter</a></li>
+      </ul>
+
+    </nav>
+<div></div>
+    <ul>
+      {#% for m in flashMessages %#}
+      <li>{#{ m }#}</li>
+      {#% endfor %#}
+    </ul>
+
+</header>
+
+<!-- Interface utilisateur -->
+<nav class="user-interface">
+    <ul class="link-list">
+        <!-- Code HTML/PHP à écrire -->
+    </ul>
+</nav>
+
+<main>
+
+  <h1>La pizza loca !</h1>
+
+  {% block body %}{% endblock %}
+</main>
+
+<!-- Pied de page commun -->
+<footer>
+    <ul class="link-list">
+        <li><img src="{{ asset('bundles/app/images/payment/visa.png') }}" alt="Visa"></li>
+        <li><img src="{{ asset('bundles/app/images/payment/mastercard.png') }}" alt="MasterCard"></li>
+        <li><img src="{{ asset('bundles/app/images/payment/paypal.png') }}" alt="PayPal"></li>
+    </ul>
+    <small>Réalisé avec <i class="fa fa-heart"></i>&nbsp; par les élèves de la 3W Academy</small>
+</footer>
+
+<!-- Code principal JavaScript de l'application -->
+<script src="{{ asset('bundles//js/main.js') }}"></script>
+
+</body>
+</html>

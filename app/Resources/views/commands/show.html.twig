@@ -1,0 +1,32 @@
+{% extends 'admin.layout.html.twig' %}
+
+{% block body %}
+    <h1>Command</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ command.id }}</td>
+            </tr>
+            <tr>
+                <th>Totalprice</th>
+                <td>{{ command.totalPrice }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('commands_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('commands_edit', { 'id': command.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

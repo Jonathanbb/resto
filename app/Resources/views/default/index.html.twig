@@ -1,0 +1,66 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+
+
+
+
+
+
+  <section class = "block">
+<img src="{{ asset('uploads/images/pizza.jpg') }}" alt="livraison" width="950px" >
+    <h2>Une tradition d'excellence depuis 1972</h2><p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.  <br><br>L'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
+  </section>
+
+
+  <section class="product">
+    <div class="box"><h3>Livraison</h3><img src="{{ asset('uploads/images/images.jpg') }}" alt="livraison"><p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. </p></div>
+    <div class="box"><h3>Atelier pizza</h3><img src="{{ asset('uploads/images/pate.jpg') }}" alt="atelier"><p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. </p></div>
+    <div class="box"><h3>Dîner en salle</h3><img src="{{ asset('uploads/images/resto.jpg') }}" alt="atelier"><p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. </p></div>
+  </section>
+
+<section class="product">
+    <div class="box">
+      <h2 class="item-title"><span class = "tiret">Notre nouveauté</span></h2>
+      <img src="{{ asset('uploads/images//mexicaine.jpg') }}" alt="Visa">
+      <h3 class="item-subtitle">Pizza orientale</h3>
+      <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>A partir de <br><span class="item-price">8,50€</span></p>
+      <button class="button">
+       <div>Ajouter au panier<div>
+      </button>
+    </div>
+
+    <div class="box">
+      <h2 class="item-title"><span class = "tiret">Notre best-seller</span></h2>
+      <img src="{{ asset('uploads/images//campione.jpg') }}">
+      <h3 class="item-subtitle">Campione</h3>
+      <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>A partir de <br><span class="item-price">7,60€</span></p>
+      <button class="button">
+       <div>Ajouter au panier<div>
+      </button>
+   </div>
+
+    <div class="box">
+      <h2 class="item-title"><span class = "tiret">Notre coup de coeur</span></h2>
+      <img src="{{ asset('uploads/images//mexicaine.jpg') }}">
+      <h3 class="item-subtitle">Pizza mexicaine</h3>
+      <p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>A partir de <br><span class="item-price">9,00€</span></p>
+      <button class="button">
+       <div>Ajouter au panier<div>
+      </button>
+
+    </div>
+  </section>
+
+{% endblock %}
+
+
+
+
+{% block stylesheets %}
+
+{% endblock %}
